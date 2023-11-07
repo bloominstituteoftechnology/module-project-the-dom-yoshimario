@@ -1,29 +1,32 @@
 function moduleProject1() {
-  const footer = document.querySelector('footer')
-  const currentYear = new Date().getFullYear()
-  footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`
+  const footer = document.querySelector("footer");
+  const currentYear = new Date().getFullYear();
+  footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`;
 
   // 👇 WORK WORK BELOW THIS LINE 👇
 
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
   //  ✨ add your code here
-  const widgets = document.querySelectorAll('section>div')
-  console.log(widgets)
+  const widgets = document.querySelectorAll("section>div");
+  console.log(widgets);
   widgets.forEach((widget) => {
-    widget.classList.add('widget')
-  })
+    widget.classList.add("widget");
+  });
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
   //  ✨ add your code here
-  const randomIdx = Math.floor(Math.random() * quotes.length)
-  const randomQuote = quotes[randomIdx] // eslint-disable-line
-  const quote = document.createElement ('div')
-  const quoteText = randomQuote.quote
-  quote.textContent = quoteText
-  console.log(quote)
-  document.querySelector('.quoteoftheday').appendChild(quote)
-
-
+  const randomIdx = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomIdx]; // eslint-disable-line
+  //begiinning of quote
+  const quote = document.createElement("div");
+  const quoteText = randomQuote.quote;
+  quote.textContent = quoteText;
+  document.querySelector(".quoteoftheday").appendChild(quote);
+  //addtion of author and date
+  const authorDate = document.createElement("div");
+  const { author, date } = randomQuote;
+  authorDate.textContent = `${author} in ${date || "an unknown date"}`;
+  document.querySelector(".quoteoftheday").appendChild(authorDate);
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
 
@@ -42,5 +45,6 @@ function moduleProject1() {
 // ❗ DO NOT WORK BELOW THIS LINE
 // ❗ DO NOT WORK BELOW THIS LINE
 // ❗ DO NOT WORK BELOW THIS LINE
-if (typeof module !== 'undefined' && module.exports) module.exports = { moduleProject1 }
-else moduleProject1()
+if (typeof module !== "undefined" && module.exports)
+  module.exports = { moduleProject1 };
+else moduleProject1();
