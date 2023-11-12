@@ -49,6 +49,16 @@ function moduleProject1() {
   countdown.textContent = `T-minus ${count}...`;
   countdownWidget.appendChild(countdown);
 
+  setInterval(() => {
+    if  (count === 1) {
+      countdown.textContent = 'Liftoff! 🚀'
+    } else {
+      count--
+      countdown.textContent = `T-minus ${count}...`;
+    }
+   
+  }, 1000);
+
   // 👉 TASK 5 - Build a "Friends" widget
   //  ✨ add your code here
 
