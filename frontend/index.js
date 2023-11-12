@@ -29,6 +29,17 @@ function moduleProject1() {
   document.querySelector(".quoteoftheday").appendChild(authorDate);
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
+  const randomVerb1 = verbs[Math.floor(Math.random() * verbs.length)];
+  const randomVerb2 = verbs[Math.floor(Math.random() * verbs.length)];
+
+  const randomAdVerb1 = adverbs[Math.floor(Math.random() * adverbs.length)];
+  const randomAdVerb2 = adverbs[Math.floor(Math.random() * adverbs.length)];
+
+  const randomNoun1 = nouns[Math.floor(Math.random() * nouns.length)];
+  const randomNoun2 = nouns[Math.floor(Math.random() * nouns.length)];
+  
+  debugger
+  console.log(randomVerb1, randomVerb2);
 
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
