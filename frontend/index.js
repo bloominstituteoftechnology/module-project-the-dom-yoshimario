@@ -31,16 +31,17 @@ function moduleProject1() {
   //  ✨ add your code here
   const randomVerb1 = verbs[Math.floor(Math.random() * verbs.length)];
   const randomVerb2 = verbs[Math.floor(Math.random() * verbs.length)];
-
   const randomAdVerb1 = adverbs[Math.floor(Math.random() * adverbs.length)];
   const randomAdVerb2 = adverbs[Math.floor(Math.random() * adverbs.length)];
-
   const randomNoun1 = nouns[Math.floor(Math.random() * nouns.length)];
   const randomNoun2 = nouns[Math.floor(Math.random() * nouns.length)];
-  
-  debugger
-  console.log(randomVerb1, randomVerb2);
 
+  const someRandom = `We need to ${randomVerb1} our ${randomNoun1} ${randomAdVerb1} in order to ${randomVerb2} our ${randomNoun2} ${randomAdVerb2}.`
+  const paragraph = document.createElement("p");
+  paragraph.textContent = someRandom;
+  document.querySelector(".corporatespeak").appendChild(paragraph);
+
+  console.log(randomVerb1, randomVerb2)
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
 
