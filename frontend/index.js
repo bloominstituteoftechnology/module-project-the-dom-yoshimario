@@ -41,9 +41,13 @@ function moduleProject1() {
   paragraph.textContent = someRandom;
   document.querySelector(".corporatespeak").appendChild(paragraph);
 
-  console.log(randomVerb1, randomVerb2)
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
+  const countdownWidget = document.querySelector(".countdown");
+  let count = 5
+  const countdown = document.createElement("p");
+  countdown.textContent = `T-minus ${count}...`;
+  countdownWidget.appendChild(countdown);
 
   // 👉 TASK 5 - Build a "Friends" widget
   //  ✨ add your code here
