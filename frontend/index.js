@@ -63,7 +63,8 @@ function moduleProject1() {
   const person = people[Math.floor(Math.random() * people.length)];
   const personParagraph = document.createElement("p");
   document.querySelector(".friends").appendChild(personParagraph);
-  personParagraph.textContent = `${person.fname} ${person.lname} was born`;
+  const year = person.dateOfBirth.split("-")[0];
+  personParagraph.textContent = `${person.fname} ${person.lname} was born ${year}`;
   console.log(person);
 
   // 👉 TASK 6 - Make it so user can tab through the widgets
