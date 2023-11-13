@@ -8,7 +8,6 @@ function moduleProject1() {
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
   //  ✨ add your code here
   const widgets = document.querySelectorAll("section>div");
-  console.log(widgets);
   widgets.forEach((widget, idx) => {
     widget.classList.add("widget");
     widget.setAttribute("tabindex", idx + 1);
@@ -75,7 +74,7 @@ function moduleProject1() {
       const friendId = person.friends[idx];
       const friend = people.find(p => p.id === friendId);
       const fullName = `${friend.fname} ${friend.lname}`;
-      console.log(fullName)
+   
       let isLastIdx =  idx === person.friends.length - 1
       let isNextToLastIdx = idx === person.friends.length - 2
       if (isLastIdx) {
