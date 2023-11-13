@@ -36,7 +36,7 @@ function moduleProject1() {
   const randomNoun1 = nouns[Math.floor(Math.random() * nouns.length)];
   const randomNoun2 = nouns[Math.floor(Math.random() * nouns.length)];
 
-  const someRandom = `We need to ${randomVerb1} our ${randomNoun1} ${randomAdVerb1} in order to ${randomVerb2} our ${randomNoun2} ${randomAdVerb2}.`
+  const someRandom = `We need to ${randomVerb1} our ${randomNoun1} ${randomAdVerb1} in order to ${randomVerb2} our ${randomNoun2} ${randomAdVerb2}.`;
   const paragraph = document.createElement("p");
   paragraph.textContent = someRandom;
   document.querySelector(".corporatespeak").appendChild(paragraph);
@@ -44,23 +44,27 @@ function moduleProject1() {
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
   const countdownWidget = document.querySelector(".countdown");
-  let count = 5
+  let count = 5;
   const countdown = document.createElement("p");
   countdown.textContent = `T-minus ${count}...`;
   countdownWidget.appendChild(countdown);
 
-  setInterval(() => {
-    if  (count === 1) {
-      countdown.textContent = 'Liftoff! 🚀'
+  const id = setInterval(() => {
+    if (count === 1) {
+      countdown.textContent = "Liftoff! 🚀";
+      clearInterval(id);
     } else {
-      count--
-      countdown.textContent = `T-minus ${count}...`;
+      countdown.textContent = `T-minus ${--count}...`;
     }
-   
   }, 1000);
 
   // 👉 TASK 5 - Build a "Friends" widget
   //  ✨ add your code here
+  const person = people[Math.floor(Math.random() * people.length)];
+  const personParagraph = document.createElement("p");
+  document.querySelector(".friends").appendChild(personParagraph);
+  personParagraph.textContent = `${person.fname} ${person.lname} was born`;
+  console.log(person);
 
   // 👉 TASK 6 - Make it so user can tab through the widgets
   //  ✨ add your code here
